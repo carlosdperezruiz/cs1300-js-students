@@ -33,9 +33,9 @@ corsPromise().then(
 //// TODO: ADD WHATEVER FUN CONTENT YOU WANT ////
 const build = (plantData) => {
   console.log(plantData);
-  plantData.sort(function(a, b) {
-    return a.common_name > b.common_name;
-  });
+  console.log(plantData.sort(function(a, b) {
+    return a.common_name.localeCompare(b.common_name);
+  }));
 
   plantData.forEach(element => {
     let div = document.createElement('div');
